@@ -65,7 +65,18 @@ tempTranspose = #(define-music-function (parser location music)
     \transpose c c \chorpartiturSchaffeSchuetz 
   }
 }
-  \paper {
+  \paper {  
     
-  }
+    ragged-right = ##f
+    ragged-last-bottom = ##f
+    left-margin = 1.3\cm
+right-margin = 1\cm
+two-sided = ##f
+inner-margin = 1\cm
+outer-margin = 1\cm
+first-page-number = 1
+#(include-special-characters)
+
+	
+}
 }

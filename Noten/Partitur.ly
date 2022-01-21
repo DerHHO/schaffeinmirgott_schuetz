@@ -1,7 +1,7 @@
 \version "2.18.2"
 #(ly:set-option 'relative-includes #t)
 #(set-default-paper-size "a4")
-#(set-global-staff-size 16)
+#(set-global-staff-size 17)
 
 \include "../Noten/SchaffeSchuetz_Noten.ly"
 
@@ -28,13 +28,17 @@ tempTranspose = #(define-music-function (parser location music)
 
 \book {
   \bookOutputName "Partitur"
-  \paper {
+  \paper {  
+    
+    ragged-right = ##f
     ragged-last-bottom = ##f
-    indent = 3\cm
-    short-indent = 1.5\cm
-    ragged-bottom = ##f
-    %max-systems-per-page = 1
-  }
+    left-margin = 1.5\cm
+right-margin = 1\cm
+print-all-headers = ##f
+#(include-special-characters)
+
+	
+}
   \header {
     title = \titel
     subsubtitle = \untertitel

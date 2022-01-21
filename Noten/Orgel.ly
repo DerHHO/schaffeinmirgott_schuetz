@@ -3,7 +3,7 @@
 
 #(set! paper-alist (cons '("Marschbuch" . (cons (* 148.5 mm) (* 120 mm)) ) paper-alist))
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 16.5)
 #(set-default-paper-size "a4")
 
 \include "../Noten/SchaffeSchuetz_Noten.ly"
@@ -65,7 +65,19 @@ tempTranspose = #(define-music-function (parser location music)
     \transpose c c \orgelsystemSchaffeSchuetz 
   }
 }
-  \paper {
-    
-  }
+  \paper {  
+    	indent = 0\cm
+	short-indent = 0\cm
+
+    ragged-right = ##f
+    ragged-last-bottom = ##f
+    left-margin = 1.3\cm
+right-margin = 1\cm
+first-page-number = 2
+indent = 0\cm
+#(include-special-characters)
+#(define page-breaking ly:page-turn-breaking)
+
+	
+}
 }
