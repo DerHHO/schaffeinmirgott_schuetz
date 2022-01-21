@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.22.0"
 #(ly:set-option 'relative-includes #t)
 #(set-default-paper-size "a4")
 #(set-global-staff-size 17)
@@ -15,7 +15,7 @@
 \include "mydrums2.ly"
 \include "drumdefinitions.ly"
 
-tempTranspose = #(define-music-function (parser location music)
+tempTranspose = #(define-music-function (music)
                    (ly:music?)
                    (let* ((octave (or (ly:get-option 'octave) -1))
                           (note (or (ly:get-option 'note) 0))
@@ -34,6 +34,7 @@ tempTranspose = #(define-music-function (parser location music)
     ragged-last-bottom = ##f
     left-margin = 1.5\cm
 right-margin = 1\cm
+indent = 1.7\cm
 print-all-headers = ##f
 #(include-special-characters)
 
@@ -47,7 +48,7 @@ print-all-headers = ##f
     poet = \herausgeber
     arranger = \arrangeur
     tagline = \schlusszeile
-    instrument = "Partitur (C)"
+    instrument = ""
   }
   
   
