@@ -99,16 +99,17 @@ sopranTextSchaffeSchuetz = \lyricmode {
   und nimm dei -- nen heil -- gen Geist nicht von mir.
   Trö -- ste mich wie -- der mit dei -- ner Hül -- fe,
   und der freu -- di -- ge Geist,
-  der freu -- di -- ge Geist en -- thal -- te mich,
+  der freu -- di -- ge Geist ent -- hal -- te mich,
   trö -- ste mich wie -- der,
   trö -- ste mich wie -- der mit dei -- ner Hül -- fe,
   und der freu -- di -- ge Geist,
   der freu -- di -- ge Geist, und
-  der freu -- di -- ge Geist en -- thal -- te mich.
+  der freu -- di -- ge Geist ent -- hal -- te mich.
 }
 
 tenorNotenSchaffeSchuetz = \tempTranspose \relative c' {
   \globalSchaffeSchuetz
+  \autoBeamOff
   \clef "treble_8" \time 4/2 \key c \major | % 1
   R1*4 | % 3
   d2. d4 b2 e2 | % 4
@@ -164,10 +165,10 @@ tenorTextSchaffeSchuetz = \lyricmode {
   und nimm dei -- nen heil -- gen Geist nicht von mir.
   
   und der freu -- di -- ge Geist, 
-  der freu -- di -- ge Geist en -- thal -- te mich,
+  der freu -- di -- ge Geist ent -- hal -- te mich,
   trö -- ste mich wie -- der, 
   trö -- ste mich wie -- der mit dei -- ner Hül -- fe,
-  und der freu -- di -- ge Geist en -- thal -- te mich.
+  und der freu -- di -- ge Geist ent -- hal -- te mich.
 }
 
 orgelRHNotenSchaffeSchuetz = \tempTranspose \relative c' {
@@ -196,7 +197,7 @@ continuoNotenSchaffeSchuetz = \tempTranspose \relative g {
   g2 e2 d1 | % 12
   g2. g4 e2 a2 | % 13
   f2 d2 g2 g,2 | % 14
-  d'2 ~ d2 c2 b4 a4 \mBreak | % 15
+  d'1 c2 b4 a4 \mBreak | % 15
   g1 c2 d2 | % 16
   g,2 g2 c1 | % 17
   g4 a4 b4 c4 d2 e4 e4 | % 18
@@ -210,7 +211,7 @@ continuoNotenSchaffeSchuetz = \tempTranspose \relative g {
   a2 g2 d'1 \mBreak | % 26
   g,1 d'1 | % 27
   a'2 a4 b4 c2 f,2 | % 28
-  bes2 ~ bes2 a1 \mBreak | % 29
+  bes1 a1 \mBreak | % 29
   a2 fis2 g4 c,4 g'2 | \barNumberCheck #30
   c,2 c2 f2 d2 \mBreak | % 31
   g2 e2 d2 e2 | % 32
@@ -287,7 +288,7 @@ metronomZeileSchaffeSchuetz = \drummode {
 }
 \include "defSchaffeSchuetz.ly"
 
-%{Arbeitspartitur
+%***Arbeitspartitur
 #(set-global-staff-size 14)
 \book {
   \bookOutputName "SchaffeSchuetz-Arbeitspartitur"
@@ -325,4 +326,4 @@ metronomZeileSchaffeSchuetz = \drummode {
     \scoreSchaffeSchuetz
   }
 }
-Arbeitspartitur%}
+%Arbeitspartitur***
